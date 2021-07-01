@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Executables\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources.txt" />
+    <None Remove="Views\.eslintrc" />
+    <None Remove="Views\babel.config.js" />
+    <None Remove="Views\config\env.js" />
+    <None Remove="Views\config\paths.js" />
+    <None Remove="Views\config\webpack.config.js" />
+    <None Remove="Views\config\webpackDevServer.config.js" />
+    <None Remove="Views\index.css" />
+    <None Remove="Views\index.tsx" />
+    <None Remove="Views\logo.svg" />
+    <None Remove="Views\package.json" />
+    <None Remove="Views\public\favicon.ico" />
+    <None Remove="Views\public\index.html" />
+    <None Remove="Views\public\logo192.png" />
+    <None Remove="Views\public\logo512.png" />
+    <None Remove="Views\public\manifest.json" />
+    <None Remove="Views\react-app-env.d.ts" />
+    <None Remove="Views\scripts\build.js" />
+    <None Remove="Views\scripts\start.js" />
+    <None Remove="Views\src\countries.json" />
+    <None Remove="Views\src\reducers.tsx" />
+    <None Remove="Views\src\reducers\userReducer.tsx" />
+    <None Remove="Views\src\serviceWorker.ts" />
+    <None Remove="Views\src\service\CountryService.js" />
+    <None Remove="Views\src\store.tsx" />
+    <None Remove="Views\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources.txt" />
+    <EmbeddedResource Include="Views\.eslintrc" />
+    <EmbeddedResource Include="Views\babel.config.js" />
+    <EmbeddedResource Include="Views\config\env.js" />
+    <EmbeddedResource Include="Views\config\paths.js" />
+    <EmbeddedResource Include="Views\config\webpack.config.js" />
+    <EmbeddedResource Include="Views\config\webpackDevServer.config.js" />
+    <EmbeddedResource Include="Views\package.json" />
+    <EmbeddedResource Include="Views\public\favicon.ico" />
+    <EmbeddedResource Include="Views\public\index.html" />
+    <EmbeddedResource Include="Views\public\logo192.png" />
+    <EmbeddedResource Include="Views\public\logo512.png" />
+    <EmbeddedResource Include="Views\public\manifest.json" />
+    <EmbeddedResource Include="Views\react-app-env.d.ts" />
+    <EmbeddedResource Include="Views\scripts\build.js" />
+    <EmbeddedResource Include="Views\scripts\start.js" />
+    <EmbeddedResource Include="Views\countries.json" />
+    <EmbeddedResource Include="Views\src\index.css" />
+    <EmbeddedResource Include="Views\src\index.tsx" />
+    <EmbeddedResource Include="Views\src\logo.svg" />
+    <EmbeddedResource Include="Views\src\reducers\userReducer.tsx" />
+    <EmbeddedResource Include="Views\src\serviceWorker.ts" />
+    <EmbeddedResource Include="Views\src\service\CountryService.js" />
+    <EmbeddedResource Include="Views\src\store.tsx" />
+    <EmbeddedResource Include="Views\src\reducers.tsx">
+      <SubType>Code</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity.Unity\Modularity.Unity.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity\Modularity.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<ModuleConfigurationElements xmlns="http://tempuri.org/ModuleConfigurationElements.xsd">
+  <ModuleConfigurationElement>
+    <Name>EarlyRedemption</Name>
+    <AssemblyFile>EarlyRedemption.dll</AssemblyFile>
+    <TypeName>EarlyRedemption.Module, EarlyRedemption</TypeName>
+  </ModuleConfigurationElement>
+  <ModuleConfigurationElement>
+    <Name>RefinancingRates</Name>
+    <AssemblyFile>RefinancingRates.dll</AssemblyFile>
+    <TypeName>RefinancingRates.Module, RefinancingRates</TypeName>
+  </ModuleConfigurationElement>
+  <ModuleConfigurationElement>
+    <Name>ApplicationBootstrap</Name>
+    <AssemblyFile>ApplicationBootstrap.dll</AssemblyFile>
+    <TypeName>ApplicationBootstrap.Module, ApplicationBootstrap</TypeName>
+  </ModuleConfigurationElement>  
+</ModuleConfigurationElements>

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Executables\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources.txt" />
+    <None Remove="Views\src\RefinancingRates.css" />
+    <None Remove="Views\src\RefinancingRates.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources.txt" />
+    <EmbeddedResource Include="Views\src\RefinancingRates.css" />
+    <EmbeddedResource Include="Views\src\RefinancingRates.tsx">
+      <SubType>Code</SubType>
+    </EmbeddedResource>
+  </ItemGroup>  
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity.Unity\Modularity.Unity.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity\Modularity.csproj" />
+  </ItemGroup>
+</Project>

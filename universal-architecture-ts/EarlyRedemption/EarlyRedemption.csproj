@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Executables\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources.txt" />
+    <None Remove="Views\EarlyRedemption.css" />
+    <None Remove="Views\EarlyRedemption.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources.txt" />
+    <EmbeddedResource Include="Views\src\EarlyRedemption.css" />
+    <EmbeddedResource Include="Views\src\EarlyRedemption.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity.Unity\Modularity.Unity.csproj" />
+    <ProjectReference Include="..\Modularity\Modularity\Modularity.csproj" />
+  </ItemGroup>
+</Project>
